@@ -12,18 +12,18 @@ cargo-make
 
 ## Clone the repositories
 
-'''
+```
 git clone https://github.com/input-output-hk/chain-libs.git
 git clone https://github.com/input-output-hk/chain-wallet-libs.git
 git clone https://github.com/input-output-hk/jormungandr.git
 git clone https://github.com/input-output-hk/jortestkit.git
 git clone https://github.com/input-output-hk/vit-testing.git
 git clone https://github.com/input-output-hk/vit-servicing-station.git
-'''
+```
 
 Or, if you have write access:
 
-'''
+```
 # use catalyst-fund9.1-dev branch
 git clone git@github.com:input-output-hk/chain-libs.git
 git clone git@github.com:input-output-hk/jormungandr.git
@@ -35,7 +35,7 @@ git clone git@github.com:input-output-hk/jortestkit.git
 
 # use catalyst-fund9 branch
 git clone git@github.com:input-output-hk/vit-servicing-station.git
-'''
+```
 
 ## Checkout `catalyst-fund9.1-dev` branches
 
@@ -46,15 +46,15 @@ jortestkit uses master.
 
 ## To build the stack
 
-'''
+```
 cargo make build-all
-'''
+```
 
 ## To install the stack
 
-'''
+```
 cargo make install-all
-'''
+```
 
 
 ## Example: to run `vitup`:
