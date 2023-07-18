@@ -1,0 +1,49 @@
+[tasks.build-vitup]
+script = '''
+cd vit-testing
+cargo build -p vitup -p iapyx -p valgrind
+'''
+
+[tasks.build-jormungandr]
+script = '''
+cd jormungandr
+cargo build -p jormungandr -p jcli
+'''
+
+[tasks.build-vitss]
+script = '''
+cd vit-servicing-station
+cargo build -p vit-servicing-station-server -p vit-servicing-station-cli
+'''
+
+[tasks.install-vitup]
+script = '''
+cd vit-testing
+cargo install --locked --path vitup
+cargo install --locked --path iapyx
+cargo install --locked --path valgrind
+'''
+
+[tasks.install-jormungandr]
+script = '''
+cd jormungandr
+cargo install --locked --path jormungandr
+cargo install --locked --path jcli
+'''
+
+[tasks.install-vitss]
+script = '''
+cd vit-servicing-station
+cargo install --locked --path vit-servicing-station-server
+cargo install --locked --path vit-servicing-station-cli
+'''
+
+[tasks.build-all]
+run_task = [
+    { name  = ["build-vitup", "build-jormungandr", "build-vitss"], parallel = true }
+]
+
+[tasks.install-all]
+run_task = [
+    { name  = ["install-vitup", "install-jormungandr", "install-vitss"], parallel = true }
+]
